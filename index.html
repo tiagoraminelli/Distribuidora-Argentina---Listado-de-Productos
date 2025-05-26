@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Distribuidora Argentina | Productos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jsPDF para PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- SheetJS para Excel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Distribuidora Argentina</h1>
+    <p>Productos nacionales al alcance de todos</p>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Listado de Productos</h2>
+
+      <input type="text" id="buscador" placeholder="Buscar producto..." />
+
+      <div class="botones">
+        <input type="file" id="inputExcel" accept=".xlsx,.xls" class="form-control mb-3" />
+
+        <button onclick="exportarPDF()">Exportar a PDF</button>
+        <button onclick="exportarExcel()">Exportar a Excel</button>
+      </div>
+
+      <ul id="listado-productos" class="producto-lista"></ul>
+
+      <div id="paginacion" class="paginacion"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Distribuidora Argentina</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+</body>
+</html>
